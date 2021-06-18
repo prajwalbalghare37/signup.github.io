@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/13e8fb5f72.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            letter-spacing: 1px;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            color: black;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            text-align: center;
+            background: rgba(248, 232, 236, 0.27);
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: nowrap;
+            align-content: center;
+            align-items: center;
+            padding: 0px 205px;
+        }
+
+        .main {
+            width: 100%;
+            background: #fff;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: space-evenly;
+            align-items: center;
+            border-radius: 20px;
+            min-height: 374px !important;
+            padding: 25px 40px;
+        }
+
+        .left-side-content {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: flex-start;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            width: 50%;
+            min-height: 100% !important;
+            margin: 0px 0px 0px 0px;
+            padding: 40px 0px;
+        }
+
+        .right-side-content {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 50%;
+            min-height: 374px !important;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px;
+        }
+
+        .heading {
+            margin-bottom: 30px;
+        }
+
+        .heading h1 {
+            font-size: xxx-large;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: flex-start;
+            justify-content: space-evenly;
+            align-items: flex-start;
+        }
+
+        .link {
+            margin-top: 32px;
+        }
+
+        .in {
+            border-bottom: 1px solid #758a8a;
+            margin-top: 15px;
+            color: #000000b5;
+            transition: all ease-in-out 0.4s;
+        }
+
+        .in:hover {
+            border-bottom: 1px solid #000;
+            color: #000;
+        }
+
+        .input {
+            margin: 12px 10px;
+            border: none;
+            outline: none;
+            letter-spacing: 1px;
+            min-width: 250px;
+        }
+
+        .check-in {
+            margin-top: 15px;
+            letter-spacing: 1px;
+        }
+
+        .checkbox {
+            margin: 12px 0px;
+        }
+
+        .icon {
+            font-size: large;
+        }
+
+        .disabled {
+            pointer-events: none;
+        }
+
+        .bg {
+            width: 38px;
+            height: 36px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 5px;
+            border-radius: 20px;
+        }
+
+        #g {
+            background: #ff3333;
+        }
+
+        #i {
+            background: #ff3490;
+        }
+
+        #fb {
+            background: #0275d8;
+        }
+
+        .btn {
+            margin-top: 30px;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            border: 2px solid #5bc0de;
+            outline: none;
+            color: rgb(0, 0, 0);
+            background: none;
+            border-radius: 5px;
+            font-size: 14px;
+            letter-spacing: 2px;
+            transition: all ease-in-out 0.4s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #39bbe2;
+        }
+
+        @media (max-width:1190px) {
+            .container {
+                padding: 0px 125px;
+            }
+        }
+
+        @media (max-width:990px) {
+            .container {
+                padding: 0px 125px;
+            }
+        }
+
+        @media (max-width:770px) {
+            .container {
+                padding: 0px 45px;
+            }
+        }
+
+        @media (max-width:630px) {
+            .container {
+                padding: 0px 15px;
+            }
+
+            .main {
+                min-height: 374px !important;
+                padding: 25px 10px;
+            }
+
+        }
+
+        @media (max-width:530px) {
+            .container {
+                padding: 22px 35px;
+            }
+
+            .main {
+                flex-direction: column;
+                min-height: 374px !important;
+                padding: 25px 0px;
+            }
+
+            .left-side-content {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: center;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 100%;
+                min-height: 100% !important;
+                margin: 0px 0px 0px 0px;
+                padding: 40px 0px 0px 0px;
+            }
+
+            .right-side-content {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: center;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 100%;
+                min-height: 374px !important;
+                margin: 0px 0px 0px 0px;
+                padding: 0px 0px;
+            }
+
+            .form {
+                width: max-content;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: center;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            .in {
+                width: max-content;
+                border-bottom: 1px solid #758a8a;
+                margin-top: 15px
+            }
+
+            .social-links {
+                width: max-content;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .social-links p {
+                font-size: 18px;
+            }
+
+            .link {
+                margin-top: 32px;
+                width: max-content;
+            }
+
+            .link a {
+                font-size: 18px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="left-side-content">
+                <!-- <div class="right-side-content"> -->
+
+                <div class="heading">
+                    <h1>Sign Up</h1>
+                </div>
+
+                <form action="" method="post" class="form">
+                    <div class="in">
+                        <i class="fas fa-user icon"></i>
+                        <input type="text" class="input" name="username" id="username" placeholder="username" required>
+                    </div>
+
+                    <div class="in">
+                        <i class="fas fa-envelope icon"></i>
+                        <input type="email" class="input" name="email" id="email" placeholder="email" required>
+                    </div>
+
+                    <div class="in">
+                        <i class="fas fa-phone-alt icon"></i>
+                        <input type="phone" class="input" name="mobilenumber" id="mobilenumber"
+                            placeholder="mobile number" required>
+                    </div>
+
+                    <div class="in">
+                        <i class="fa fa-lock icon"></i>
+                        <input type="password" class="input" name="password" id="password" placeholder="password"
+                            required>
+                    </div>
+
+                    <div class="check-in">
+                        <input type="checkbox" class="checkbox" name="checkbox" id="checkbox" required>
+                        <span style="font-size:13px;">I agree all statements in <a href="">Terms of service</a></span>
+                    </div>
+
+                    <button type="submit" class="btn" id="btn-signup">Sign Up</button>
+                </form>
+
+            </div>
+            <div class="right-side-content">
+                <!-- <div class="left-side-content"> -->
+
+                <div class="img">
+                    <img src="signup.jpg" alt="img">
+                </div>
+
+                <div class="link">
+                    <a href="/">I am already member</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
